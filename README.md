@@ -1,2 +1,3 @@
-# DBMS-Lab-Programs
-My DataBase Management(DBMS) Lab Programs
+# DBMS Lab Programs
+
+My DataBase Management System(DBMS) Lab Programs
