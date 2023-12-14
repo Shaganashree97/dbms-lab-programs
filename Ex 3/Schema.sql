@@ -24,6 +24,14 @@ CREATE TABLE IF NOT EXISTS Sale (
     FOREIGN KEY (PID) REFERENCES Product(PID)
 );
 
+-- Creating the 'Supplier' table
+CREATE TABLE IF NOT EXISTS Supplier (
+    SID INT PRIMARY KEY,
+    sname VARCHAR(50),
+    slocation VARCHAR(50),
+    Quantity INT
+);
+
 -- Creating the 'order' table if it doesn't exist
 CREATE TABLE IF NOT EXISTS `Order` (
     OID INT PRIMARY KEY NOT NULL,
@@ -32,12 +40,4 @@ CREATE TABLE IF NOT EXISTS `Order` (
     dateoforder DATE,
     FOREIGN KEY (PID) REFERENCES Product(PID),
     FOREIGN KEY (SID) REFERENCES Supplier(SID)
-);
-
--- Creating the 'Supplier' table
-CREATE TABLE IF NOT EXISTS Supplier (
-    SID INT PRIMARY KEY,
-    sname VARCHAR(50),
-    slocation VARCHAR(50),
-    Quantity INT
 );
